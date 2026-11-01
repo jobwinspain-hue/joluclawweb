@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>JoluClaw · Jolu Games</title>
+<meta name="description" content="JoluClaw: la máquina de gancho llena de premios. The claw machine full of prizes.">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Figtree:wght@500;700;800&display=swap">
+<style>
+/* Una sola pantalla de estanque (look fijo, oscuro): agua del juego, papel crema para las tarjetas */
+:root{--water:#1d4fb8;--deep:#0a1650;--paper:#fff7e6;--ink:#15302e;--gold:#ffbe2e;--coral:#ff5a3c;--muted:#9fc9c6;
+--display:"Baloo 2",system-ui,sans-serif;--body:Figtree,system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}html,body{margin:0}a{color:var(--gold)}
+body{background:radial-gradient(120% 80% at 50% 0%,#3f8fe6 0%,var(--water) 45%,var(--deep) 100%) fixed,var(--deep);color:var(--paper);font:500 16px/1.55 var(--body)}
+.wrap{max-width:720px;margin:0 auto;padding-block:28px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:28px}
+.top{display:flex;justify-content:flex-end}
+.lang{display:flex;gap:4px;background:rgba(0,0,0,.25);padding:4px;border-radius:12px}
+.lang button{border:0;border-radius:9px;padding:6px 12px;font:800 13px var(--body);background:transparent;color:var(--paper);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+.lang button:focus-visible,.cta:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hero{text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+.logo{width:min(100%,460px);height:auto;filter:drop-shadow(0 10px 22px rgba(0,0,0,.35))}
+h1{font:800 clamp(26px,6vw,38px)/1.1 var(--display);margin:0;text-wrap:balance}
+.lead{margin:0;max-width:52ch;color:#d9efec;font-size:17px}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--coral);color:#fff;font:800 16px var(--body);padding:13px 22px;border-radius:16px;box-shadow:0 5px 0 #b8331c}
+.cta small{font-weight:700;opacity:.85}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.facts div{background:rgba(0,0,0,.22);border-radius:16px;padding:14px 10px;text-align:center}
+.facts b{display:block;font:800 30px/1 var(--display);color:var(--gold);font-variant-numeric:tabular-nums}
+.facts span{font-size:13px;color:var(--muted);font-weight:700}
+.card{background:var(--paper);color:var(--ink);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.card h2{font:800 22px/1.2 var(--display);margin:0}
+.card p{margin:0}
+.card ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+footer{text-align:center;font-size:13px;color:var(--muted)}
+@media (max-width:420px){.facts b{font-size:24px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="top"><div class="lang" role="group" aria-label="Idioma / Language"><button id="bEs" type="button" data-l="es">ES</button><button id="bEn" type="button" data-l="en">EN</button></div></div>
+  <header class="hero">
+    <img class="logo" src="logo.png" alt="JoluClaw" width="460" height="262">
+    <h1 data-es="La máquina de gancho llena de premios" data-en="The claw machine full of prizes"></h1>
+    <p class="lead" data-es="Mueve el gancho, bájalo en el momento justo y atrapa peluches, móviles, consolas, joyas de oro y mucho más. Decora tus salones con los premios, viste a tus muñecos Jolu y llena el JoluZoo de animales únicos." data-en="Move the claw, drop it at just the right moment and grab plushies, phones, consoles, gold jewels and much more. Decorate your rooms with your prizes, dress up your Jolu dolls and fill the JoluZoo with unique animals."></p>
+    <span class="cta"><span data-es="Próximamente en Google Play" data-en="Coming soon to Google Play"></span></span>
+  </header>
+  <section class="facts" aria-label="JoluClaw">
+    <div><b>157</b><span data-es="premios" data-en="prizes"></span></div>
+    <div><b>100</b><span data-es="animales" data-en="animals"></span></div>
+    <div><b>5</b><span data-es="salones + zoo" data-en="rooms + zoo"></span></div>
+  </section>
+  <section class="card">
+    <h2 data-es="Qué hay dentro" data-en="What’s inside"></h2>
+    <ul>
+      <li data-es="Dos máquinas: JoluClaw, con 157 premios normales, épicos y legendarios de oro, y Jolunicos, con 100 animales únicos." data-en="Two machines: JoluClaw, with 157 common, epic and golden legendary prizes, and Jolunicos, with 100 unique animals."></li>
+      <li data-es="Cinco salones para decorar (moderno, rústico, gamer, playa y lujo) y un zoo donde tus animales se mueven." data-en="Five rooms to decorate (modern, rustic, gamer, beach and luxury) and a zoo where your animals move around."></li>
+      <li data-es="Viste a los muñecos Jolu con gorros, gafas, capas, alas y joyas." data-en="Dress up the Jolu dolls with hats, glasses, capes, wings and jewels."></li>
+      <li data-es="Una canción para cada máquina y cada salón. En español e inglés." data-en="A song for every machine and every room. In Spanish and English."></li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2 data-es="Privacidad" data-en="Privacy"></h2>
+    <p data-es="JoluClaw no pide cuenta ni datos personales. Tus partidas se guardan solo en tu móvil. El juego muestra anuncios de Google AdMob cuando tú decides ver uno a cambio de una recompensa." data-en="JoluClaw doesn’t ask for an account or personal data. Your games are saved only on your phone. The game shows Google AdMob ads when you choose to watch one for a reward."></p>
+    <p><a href="privacidad.html" data-es="Leer la política de privacidad completa" data-en="Read the full privacy policy"></a></p>
+  </section>
+  <footer><span data-es="JoluClaw · un juego de Jolu Games · creado en Málaga" data-en="JoluClaw · a Jolu Games game · made in Málaga, Spain"></span><br><a href="privacidad.html" data-es="Política de privacidad" data-en="Privacy policy"></a> · <a href="terminos.html" data-es="Términos y condiciones" data-en="Terms and conditions"></a> · <a href="aviso-legal.html" data-es="Aviso legal" data-en="Legal notice"></a> · <span data-es="Contacto" data-en="Contact"></span>: jobwinspain@gmail.com</footer>
+</div>
+<script>
+(function(){
+  var l='es'; try{ var s=localStorage.getItem('jl'); if(s==='es'||s==='en') l=s; else if(!/^(es|ca|gl|eu)\b/i.test(navigator.language||'es')) l='en'; }catch(e){}
+  function set(x){ l=x; document.documentElement.lang=x; document.querySelectorAll('[data-es]').forEach(function(e){ e.textContent=e.getAttribute('data-'+x); });
+    document.querySelectorAll('.lang button').forEach(function(b){ b.setAttribute('aria-pressed',b.dataset.l===x); }); try{ localStorage.setItem('jl',x); }catch(e){} }
+  document.querySelectorAll('.lang button').forEach(function(b){ b.onclick=function(){ set(b.dataset.l); }; });
+  set(l);
+})();
+</script>
+
+</body>
+</html>

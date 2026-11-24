@@ -25,6 +25,13 @@ h1{font:800 clamp(26px,6vw,38px)/1.1 var(--display);margin:0;text-wrap:balance}
 .lead{margin:0;max-width:52ch;color:#d9efec;font-size:17px}
 .cta{display:inline-flex;align-items:center;gap:10px;background:var(--coral);color:#fff;font:800 16px var(--body);padding:13px 22px;border-radius:16px;box-shadow:0 5px 0 #b8331c}
 .cta small{font-weight:700;opacity:.85}
+a.cta{text-decoration:none;gap:14px;padding:12px 28px 13px 22px;transition:transform .12s,box-shadow .12s}
+a.cta:hover{transform:translateY(-2px)}
+a.cta:active{transform:translateY(3px);box-shadow:0 2px 0 #b8331c}
+.gp{width:30px;height:30px;flex:none}
+.ct{display:flex;flex-direction:column;align-items:flex-start;line-height:1.1;text-align:left}
+.ct small{font-size:12px;letter-spacing:.06em}
+.ct b{font:800 24px/1.1 var(--display)}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .facts div{background:rgba(0,0,0,.22);border-radius:16px;padding:14px 10px;text-align:center}
 .facts b{display:block;font:800 30px/1 var(--display);color:var(--gold);font-variant-numeric:tabular-nums}
@@ -45,7 +52,7 @@ footer{text-align:center;font-size:13px;color:var(--muted)}
     <img class="logo" src="logo.png" alt="JoluClaw" width="460" height="262">
     <h1 data-es="La máquina de gancho llena de premios" data-en="The claw machine full of prizes"></h1>
     <p class="lead" data-es="Mueve el gancho, bájalo en el momento justo y atrapa peluches, móviles, consolas, joyas de oro y mucho más. Decora tus salones con los premios, viste a tus muñecos Jolu y llena el JoluZoo de animales únicos." data-en="Move the claw, drop it at just the right moment and grab plushies, phones, consoles, gold jewels and much more. Decorate your rooms with your prizes, dress up your Jolu dolls and fill the JoluZoo with unique animals."></p>
-    <span class="cta"><span data-es="Próximamente en Google Play" data-en="Coming soon to Google Play"></span></span>
+    <a class="cta" href="https://play.google.com/store/apps/details?id=com.jobwinspain.joluclaw" target="_blank" rel="noopener"><svg class="gp" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M4 2.6v18.8c0 .5.5.8.9.6l16.3-9.4c.4-.2.4-.8 0-1L4.9 2c-.4-.2-.9.1-.9.6z"/></svg><span class="ct"><small data-es="DISPONIBLE GRATIS EN" data-en="GET IT FREE ON"></small><b>Google Play</b></span></a>
   </header>
   <section class="facts" aria-label="JoluClaw">
     <div><b>177</b><span data-es="premios" data-en="prizes"></span></div>
